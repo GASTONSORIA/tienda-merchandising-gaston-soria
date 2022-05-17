@@ -1,0 +1,39 @@
+[
+    {
+        "id": "01",
+        "categoria": "libreria",
+        "name": "lapices-plantables",
+        "price": "500",
+        "img": "/images/lapiz-plantable.jpg",
+        "detail": "Lápiz grafito de madera con cápsulas biodegradables. Variedad de semillas: cilantro, perejil, albahaca, rúcula, mix de flores. "
+    },
+
+    {
+        "id": "02",
+        "categoria": "libreria",
+        "name": "set-organizador",
+        "price": "1000",
+        "img": "/images/set-organizador.jpg",
+        "detail": "Práctico y funcional. Ayuda a organizar y ordenar tu escritorio. Cuentan con un soporte para el celular con parlante eco, anotador, tarjetero, lapicero, pendrive o clics. "
+    },
+
+    {
+        "id": "03",
+        "categoria": "soportes",
+        "name": "soporte-ipad",
+        "price": "2000",
+        "img": "/images/soporte-ipad.jpg",
+        "detail": "Soporte para tablet, cruzado de Fibroplus "
+    },
+
+    {
+        "id": "04",
+        "categoria": "soportes",
+        "name": "soporte-laptop",
+        "price": "3000",
+        "img": "/images/soporte-laptop.jpg",
+        "detail": "Soporte para notebook, de Fibroplus con respiración."
+    }
+
+    
+]

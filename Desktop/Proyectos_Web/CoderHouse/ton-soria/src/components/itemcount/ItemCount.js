@@ -1,40 +1,34 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { Link } from "react-router-dom";
 
-export default function ItemCount({ stock, initial, onAdd }) {
-    
-    const [cantidad, setCantidad] = useState(1)
-    
-     
-    function sumarItem() {
-        if(stock > cantidad) {
-            setCantidad(cantidad + 1)
-        }
+
+export default function ItemCount({id, initial, stock, onAdd}) {
+    const [quantity, setQuantity] = useState(initial);
+
+    function increase() {
+        if (quantity < stock) {
+            setQuantity(quantity + 1);
+        } 
     }
 
-    function restarItem() {
-        if(initial < cantidad) {
-            setCantidad(cantidad - 1)
-        }
+    function decrease() {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        } 
     }
 
-    function agregarCarrito() {
-        if(stock > 0)
-        onAdd = (cantidad)
-        console.log(onAdd)
+    function addToCart() {
+        onAdd(quantity);
     }
 
-    
-    
-    
-
-  
     return (
-    <>
-        <button onClick={sumarItem}>+</button> <span>{cantidad}</span> <button onClick={(restarItem)}>-</button>
-        <br/>   
-        <button onClick={agregarCarrito}>Agregar al carrito</button>
-        
-
-    </>
-  )
+        <div>
+            <button id='less'  onClick={decrease}>-</button>
+            <span>{quantity}</span>
+            <button id='plus' onClick={increase}>+</button>
+            <Link to={`/itemDetail/${id}`}>
+                <button  onClick={addToCart}>CARRITO</button>
+            </Link>
+        </div>
+    );
 }
